@@ -12,6 +12,7 @@ require('lib/header.php');
 
 
 if(isset($_GET['ticket_sent'])){
+
     $ticket->send_ticket($_POST['description'], $_POST['room'], $_SESSION['auth_id']);
 }
 
@@ -35,6 +36,7 @@ if (isset($_GET['logout'])) {
         <script type="text/JavaScript" src="js/bootstrap.js"></script> 
 		 <script type="text/JavaScript" src="js/npm.js"></script>
 		 <script src="js/jquery.min.js"></script>
+		 <script src="js/jquery.validate.min.js"></script>
 	</head>
 	<body>
 	<?php 

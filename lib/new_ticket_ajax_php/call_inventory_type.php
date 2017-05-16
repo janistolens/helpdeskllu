@@ -1,6 +1,3 @@
 <?php
-include()
     $room = $_POST['room'];
-    echo "<option>".$room."</option>";
-
-?>
+    echo "<option value='test'>".$room."</option>";

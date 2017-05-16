@@ -56,6 +56,8 @@ class Auth {
 		session_destroy();		
 	}
 
+
+
 	function pwd($pwd) {
 		return hash('sha256', $pwd . $this->salt);
 	}

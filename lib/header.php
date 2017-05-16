@@ -39,8 +39,8 @@
             <div class='container-fluid'>
                 <div class='navbar-header'>
                     <ul class='nav navbar-nav'>
-                        <li role='presentation'"; nav_bar_handler("/admin_area/admin_home.php"); echo "><a href='admin_home.php'>Sākums</a></li>
-                        <li role='presentation'"; nav_bar_handler("/admin_area/all_tickets.php"); echo "><a href='all_tickets.php'>Visas Problēmas</a></li>
+                        <li role='presentation'"; nav_bar_handler("/admin_area/admin_home.php"); echo "><a href='index.php'>Sākums</a></li>
+                        <li role='presentation'"; nav_bar_handler("/admin_area/all_tickets.php"); echo "><a href='?admin_area/all_tickets.php'>Visas Problēmas</a></li>
                     </ul>
                 </div>
                     <ul class='nav navbar-nav navbar-right'>

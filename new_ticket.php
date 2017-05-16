@@ -1,11 +1,5 @@
-<?php
 
-
-if(isset($_GET['ticket_sent'])){
-    $ticket->send_ticket($_POST['description'], $_POST['room'], $_SESSION['auth_id']);
-}
-?>
-        <form class="form-horizontal" action="index.php?new_ticket&ticket_sent" method="post">
+        <form class="form-horizontal"  action="index.php?new_ticket&ticket_sent" method="post" name="new_ticket">
   			<div class="form-group">
     			
     				<div class="col-sm-offset-3 col-sm-5">
@@ -23,8 +17,8 @@ if(isset($_GET['ticket_sent'])){
 				<div class="form-group">
    					<div class="col-sm-offset-3 col-sm-5">
       <label for="sel1">Izvēlieties ierīces veidu: </label>
-      <select class="form-control" id="sel1">
-	  	<option>Ierīču veidi</option>
+      <select class="form-control" id="sel1" name="inv_type">
+	  	<option value=''>Ierīču veidi</option>
 		<script>
 		jQuery('#inputRoom3').on('input', function() {
 			$.ajax({
@@ -35,7 +29,7 @@ if(isset($_GET['ticket_sent'])){
       		room : $('#inputRoom3').val()
   			},
 			beforeSend : function() {
-				$("#sel1").html("<option>Ierīču veidi</option>");
+				$("#sel1").html("<option value=''>Ierīču veidi</option>");
 			},
   			success : function(data) {
 			$("#sel1").append("Your input: "+data)
@@ -49,8 +43,8 @@ if(isset($_GET['ticket_sent'])){
 			  				<div class="form-group">
    					<div class="col-sm-offset-3 col-sm-5">
       <label for="sel1">Izvēlieties ierīci: </label>
-      <select class="form-control" id="sel1">
-	  	<option>Kabinetā esošās ierīces:</option>
+      <select class="form-control" id="sel2" name="inventory">
+	  	<option value=''>Kabinetā esošās ierīces:</option>
         <option>TEST MONITOR 37 1 (Inventāra numurs)</option>
         <option>TEST MONITOR 37 2 (Inventāra numurs)</option>
       </select>
@@ -62,6 +56,4 @@ if(isset($_GET['ticket_sent'])){
    				</div>
  			 </div>
 		</form>
-
-
-
+<script src="js/form-validation.js"></script>

@@ -25,7 +25,23 @@ if($auth->user_role_check() !== 'admin')
         <script type="text/JavaScript" src="../js/npm.js"></script>
     </head>
     <body>
-        <?php show_admin_header($auth); ?>    
-        <?php $ticket->single_ticket($ticket_id); ?>
+        <?php show_admin_header($auth); ?>
+            
+        <?php //$ticket->single_ticket($ticket_id); ?>
+        <div class="container">
+            <div class="jumbotron">
+                    
+                 <h2>Problēmas apraksts</h2> 
+
+                        <form class="form-horizontal">
+                                <div class="form-group">
+                                <label for="inputPassword" class="col-sm-2 control-label">Disabled</label>
+                                <div class="col-sm-10">
+                                <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+                                </div>
+                                </div>
+                        </form>
+            </div>
+        </div>
     </body>
 </html>
